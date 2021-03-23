@@ -1,0 +1,136 @@
+
+.courses__left{
+    position: relative;
+    background-color:#f7f8fa;
+    .left__text{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        padding: 0 32px;
+        b{
+            @include styleText($color-black-0,$fs-2 - 1,$fw-bold-1);
+        }
+        p{
+            @include styleText($color-black-0,$fs-0 + 1,$fw-normal);
+        }
+    }
+}
+.courses__skill ul  {
+    align-content: center;
+    border: none;
+    border-radius: 0;
+    border-bottom: 6px solid transparent;
+    color: #29303b;
+    display: flex;
+    text-align: left;
+    white-space: normal;
+    width: inherit;
+    list-style: none;
+    li.active::after{
+        border-bottom: 6px solid blue;
+    }
+    li{
+        margin: 0 11px 16px 11px;
+        a{
+            @include styleText($color-black-0,$fs-0,$fw-normal);
+            text-decoration: none;
+            border-color: #007791;
+        
+        }
+    }
+}
+.item{
+    margin: 5px;
+    display: inline-block;
+    text-align: left;
+    border: 1px solid rgb(200, 230, 280);
+    &:hover{
+        box-shadow: 0 0 1px 1px rgb(200, 230, 280), 0 3px 1px 0 rgb(200, 230, 280);
+    }
+    h3{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        font-weight: 700;
+        height: 42px;
+        font-size: 15px;
+    }
+    a{
+        text-decoration: none;
+        color: #29303b;
+    
+    }
+    img{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &hover img{
+        color: #003845;
+        width: 100%;
+        height: 100%;
+    }
+    i{
+        color: sandybrown;
+        font-size: 10px;
+    }
+      
+    
+      
+}
+.slick-slider .slick-arrow {
+    background-color: #fff;
+    border-radius: 50%;
+    border-width: 0;
+    box-shadow: 0 0 1px 1px $color-gray-1, 0 3px 1px 0 $color-black-dark;
+    color: #007791;
+    font-size: 24px;
+    height: 47px;
+    line-height: 1;
+    padding: 11px 0;
+    text-align: center;
+    
+    transform: translateY(-50%);
+    transition: 300ms;
+    width: 47px;
+    z-index: 3;
+    position: absolute;
+   
+  }
+  .slick-slider .slick-arrow.left {
+    left: -10px;
+    top: 50%;
+  }
+  
+  .slick-slider .slick-arrow.right {
+    right: -10px;
+    top: 50%;
+  }
+// respoinsive 
+@include respoinsive('extra-large'){
+   
+}
+@include respoinsive('large'){
+    .courses__left{
+        display: none;
+    }
+}
+@include respoinsive('medium')
+{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

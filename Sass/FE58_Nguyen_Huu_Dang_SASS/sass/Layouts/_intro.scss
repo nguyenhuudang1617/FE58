@@ -1,0 +1,27 @@
+.intro{
+    background: linear-gradient(to right,#6E1A52 ,#EC5252 );
+    .intro__content{
+        display: flex;
+        color: white;
+        span{
+            display: block;
+            float: left;
+            font-size: 50px;
+            margin-right: 20px;
+        }
+        .intro__text{
+            text-align: left;
+            padding-top: 15px;
+        }
+        
+    }
+}
+
+// respoinsive 
+
+@include respoinsive('medium')
+{
+    .intro{
+        display: none;
+    }
+}

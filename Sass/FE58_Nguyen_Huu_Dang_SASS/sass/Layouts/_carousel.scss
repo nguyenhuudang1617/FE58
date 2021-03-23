@@ -1,0 +1,30 @@
+.udeCarousel{
+    background-image: url(../../img/cover.jpg);
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .udeCarousel__content{
+        position: absolute;
+        color: white;
+        top: 30%;
+        left: 10%;
+        margin: 30px auto;
+        h1{
+    
+            @include styleText($color-white-0,$fs-4,$fw-bold);
+        }
+        p{
+            @include styleText($color-white-0,$fs-2 - 2,$fw-bold);
+
+        }
+        .form-control{
+            font-size: 20px;
+            height: 50px;
+            padding: 11px 17px;
+        }
+        
+    }
+    
+}
+

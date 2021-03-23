@@ -1,0 +1,79 @@
+.header__left{
+    display: flex;
+    align-items: center;
+    @include styleText($color-black-light,$fs-1,$fw-normal);
+    .navbar-brand{
+        flex-grow: 1;
+        img{
+            width: 110px;
+        }
+    }
+    .header-cate{
+        flex-grow: 1;
+        i{
+            font-size: 15px;
+            margin: 0 5px;
+        }
+    }
+    .header-form{
+        flex-grow: 5;
+        box-shadow: none;
+        i{
+        
+            font-size: 15px;
+            color: $color-red-0;
+        }
+    }
+}
+.header__right{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    .nav-item{
+        align-self: center;
+        .nav-link{
+            @include styleText($color-black-light,$fs-1,$fw-normal);
+        }&:hover{
+            background-color: $color-gray-1;
+        }
+        
+    }
+    .ude-shopcart{
+        i{
+            font-size: 15px;
+            margin: 0 5px;
+        }
+    }
+    .nav-item:nth-child(3){
+        border-radius: 50%;
+    }
+
+}
+// respoinsive 
+@include respoinsive('extra-large'){
+    .header__right{
+        .ude-business,.ude-teach{
+            display: none;
+        }       
+    }
+}
+@include respoinsive('large'){
+    .header__right{
+        .ude-btnGroup{
+            white-space: nowrap;
+        }
+    }
+}
+@include respoinsive('medium')
+{
+    .header__left{
+        .header-cate,.header-form{
+            display: none;
+        }
+    }
+    .header__right{
+        .ude-btnGroup{
+            display: none;
+        }
+    }
+}

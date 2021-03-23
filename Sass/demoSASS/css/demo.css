@@ -1,0 +1,35 @@
+h1 {
+  background-color: red;
+}
+
+.sec1 h2, .sec2 h2 {
+  background-color: chocolate;
+}
+
+.sec1 button, .sec2 button {
+  background-color: coral;
+}
+
+.sec1 button:hover, .sec2 button:hover {
+  background-color: crimson;
+}
+
+.sec2 p {
+  color: cyan;
+}
+
+.sec3 h2 {
+  background-color: darkblue;
+  color: darkgoldenrod;
+}
+
+.sec4 h2 {
+  background-color: red;
+  color: white;
+}
+
+.sec5 h2 {
+  background-color: yellow;
+  color: white;
+}
+/*# sourceMappingURL=demo.css.map */

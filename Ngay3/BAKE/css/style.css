@@ -1,0 +1,486 @@
+/* GLOBAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Montserrat', sans-serif;
+    /* 1rem = 18px */
+    font-size: 18px;
+    /* nếu k khai báo, mặc định 1 rem = 16px */
+
+}
+/* HEADER */
+header{
+    background-color: #4e2a84;
+    padding: 20px 0;
+    /* position: fixed; position: absolute; làm mất kích thước thẻ */
+    position: fixed;
+    width: 100%;
+    /* z-index: ; chỉ đi chung vs position */
+    z-index: 100;
+}
+.header__content{
+    /* căn giữa nội dung 1 phần chính theo chiều ngang */
+    width: 70%;
+    margin: 0 auto;
+    /* chỉnh các thẻ con thì trực tiếp gọi thẻ cha gần nhất      */
+    display: flex;
+    /* thêm khoảng cách trái phải cho các thẻ con của flex */
+    justify-content: space-around;
+    /* căn chỉnh nội dung của thẻ con theo trục dọc */
+    align-items: center;
+}
+.header__content p{
+    color: white;
+    /* đơn vị "rem": thường dùng cho font-size */
+    /* rem cho spacing (margin, padding) của vùng chữ đang dùng rem  */
+    font-size: 2.0556rem;
+
+}
+header ul {
+    list-style: none;
+}
+header li{
+display: inline;
+}
+header ul a{
+    text-decoration: none;
+    color: white;
+}
+/* CAROUSEL */
+.carousel{
+    background-image: url(./../img/b3.jpg);
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    /* căn giữa thẻ con của flex chỉ dùng khi có 1 thẻ con */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel__content{
+    color: white;
+    text-align: center;
+   
+}
+.carousel__content h1{
+    font-size: 3rem;
+}
+.carousel__content p{
+    padding: 30px 0;
+}
+.carousel__content button{
+    padding: 12px 27px;
+    background-color: #ff0e83;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    /* khoảng cách giữa các kí tự */
+    letter-spacing: 1px;
+    /* rê chuột xuất hiện bàn tay */
+    cursor: pointer;
+}
+.carousel__content button:hover{
+    background-color: white;
+    color: black;
+    border-color: #ff0e83;
+}
+.carousel h1{
+  animation: upDown 3s linear 0s infinite ;
+}
+/* INTRO */
+.intro{
+    display: grid;
+    /* nếu có thẻ con chiếm số hàng nhiều thì khai báo thêm hàng
+    Mặc định chỉ cần khai báo cột */
+    /* Khai báo cột */
+    /* grid-template-columns: 25% 25% 25% 25%; */
+    /* grid-template-columns: repeat(4,25%); */
+    /* fr: phân số  */
+    /*  repeat(4,1fr) ->kích thước mỗi cột 1/4 */
+    grid-template-columns: repeat(4,1fr);
+}
+.intro__ab1{
+    /* đường bắt đầu và đường kết thúc thẻ */
+    /* grid-column: 2/4; */
+    /* đường bắt đầu,số lượng cột cần chiếm */
+    grid-column: 2 / span 2;
+}
+.intro__best{
+    grid-column: 1 / span 2;
+}
+.intro__ab4{
+    grid-column: 3 /span 2;
+}
+.intro__item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* tham khảo slide css 12 , 21 */
+.intro .intro__item:first-child{
+    background-color: #6610f2;
+    color: white;
+}
+.intro .intro__item:nth-child(3){
+    background-color: #e83e8c;
+    color: white;
+}
+.intro .intro__item:nth-child(4){
+    background-color: #e83e8c;
+    color: white;
+}
+.intro .intro__item:nth-child(6){
+    background-color:#6c757d;
+    color: white;
+}
+.intro .intro__item:nth-child(8){
+    background-color: #007bff;
+    color: white;
+}
+.intro__item{
+    display: flex;
+    align-items: center;
+    /*justify-content chỉ dùng được khi thẻ cha còn chỗ trống  */
+    justify-content: center;
+}
+.intro__text{
+    width: 70%;
+    /* margin: auto; */
+    text-align: center;
+}
+/* NUMBER  */
+.number{
+    padding: 80px 0;
+}
+.number__content{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    font-weight: bold;
+}
+.number__item p:first-child{
+    font-size: 32px;
+    color: #4e2a84;
+    padding: 20px 0;
+}
+.number__item p:last-child{
+    font-size: 23px;
+    
+}
+.number__item{
+    width: 25%;
+}
+
+/* SERVICES */
+.services{
+    text-align: center;
+    padding: 60px 0;
+    background-image: url("./../img/s1.jpg");
+    height: 600px;
+
+}
+.services h2{
+    text-align: center;
+    padding: 80px 0;
+}
+.services__item{
+    padding: 0 15px;
+   
+}
+.services__item i{
+    font-size: 3rem;
+    color: #4e2a84;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #4e2a84;
+    border-radius: 50%;
+    /* canh icon ở giữa theo chiều dọc khi cho line- height bằng hoặc gần bằng height */
+    /* chỉ áp dụng với icon hoặc text có 1 dòng chữ  */
+    line-height: 100px;
+    /* transition: property duration deley */
+/* transition: all 0s 0.5s; */
+    transition: 0.5s;
+    /* transition-duration: .5s; */
+    
+}
+.services__item:hover i{
+    color:  #ff0e83;
+}
+/* chưa rê chuột (hover) */
+.services__item button{
+    padding: 12px 27px;
+    background-color: #ff0e83;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    /* khoảng cách giữa các kí tự */
+    letter-spacing: 1px;
+    /* rê chuột xuất hiện bàn tay */
+    cursor: pointer;
+}
+/* đã rê chuột (hover) */
+.services__item button:hover{
+    background-color: white;
+    color: black;
+    border-color: #ff0e83;
+}
+.services__content{
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}
+
+/* GALLERY */
+.gallery h2{
+    text-align: center;
+    padding: 70px 0;
+}
+.gallery__content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+     /* khoảng cách giữa các thẻ con của grid */
+    /* grid-gap: 30px; */
+    gap: 30px;
+    padding: 0 15px ;
+    
+}
+.gallery__item img{
+    display: block;
+    width: 100%;
+    height: 100%;
+   
+   
+    
+}
+.gallery__g1{
+    grid-column: 1 / span 2;
+}
+.gallery__g6{
+    grid-column: 3 / span 2;
+}
+.gallery__item{
+    position: relative;
+}
+.gallery__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 131, 162, 0.336);
+    color: white;
+    padding: 40px 30px;
+    text-align: right;
+}
+
+.gallery__overlay h3::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    display: block;
+    margin-top: 10px;
+    transform: translateY(50px);
+    transition: 0.5s;
+    opacity: 0;   
+}
+.gallery__overlay span{
+    font-weight: normal;
+}
+.gallery__overlay h3{
+    /* font-weight: bold; */
+    font-size: 30px;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+.gallery__overlay:hover h3{
+    transform: translateY(0); 
+}
+.gallery__overlay:hover h3::after{
+    transform: translateY(50px);
+    transition: 0.5s;
+    opacity: 1;
+}
+.gallery__overlay p{
+    position: absolute;
+    bottom: 40px;
+    right: 30px;  
+    transform: translateY(50px);
+    opacity: 0;
+    font-size: 10px;
+}
+.gallery__overlay p::after{
+    transform: translateY(50px);
+    transition: 0.5;
+    opacity: 1;
+}
+.gallery__overlay:hover p{
+    transform: translateY(0);
+    transition: 0.5s;
+    opacity: 1;
+}
+.gallery__overlay:hover p::after{
+    transform: translateY(50px);
+    transition: 0.5s;
+    opacity: 0;
+}
+
+/* TEAM */
+.team h2{
+    text-align: center;  
+    padding:80px 0 ;
+}
+.team__content{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.team__item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.team__item{
+    position: relative;   
+}
+.team_pink{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    color: white;
+    padding: 20px ;
+    opacity: 1;
+    transition: 0.5s;
+}
+.team__black{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    padding: 100px 50px;  
+}
+.team__black p{
+    margin: 10px 0;
+}
+.team__item:hover .team__black{
+    opacity: 1;
+    transition: 0.5s;
+}
+.team__black h3{
+    color: pink;   
+}
+.team__item:hover .team_pink{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/* FEEDBACK */
+.feedback{
+    padding: 70px 0;
+}
+.feedback h2{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 40px;
+}
+.feedback__content{
+    width: 70%;
+    margin: auto;
+    border: 2px solid pink;
+    padding: 20px;
+    text-align: center;
+}
+/* .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span */
+ /* ?????? */
+/* .feedback .owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+    background-color: red;
+} */
+
+/* .CONTACT */
+.contact__form form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 70%;
+    margin: auto;
+    gap: 15px 30px  
+}
+.contact__form input,textarea{
+    font-size: 15px;
+    /* 1em=15px */
+    padding: 1em;
+    transition: 0.5s;
+    border: 1px solid black;
+}
+.contact__form textarea{
+    grid-column: 1 / span 2;
+    outline: none;
+    /* tắt tính năng resize textarea */
+    resize: none;
+}
+.contact__form textarea::placeholder{
+    color: black;
+}
+.contact__form button{
+    grid-column: 1 / span 2;
+    padding: 10px;
+    background-color: pink;
+}
+.contact__form input:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    
+}
+.contact__map iframe{
+    width: 100%;
+}
+
+/* BACK TO TOP */
+.backToTop{
+    width: 80px;
+    height: 80px;
+    border: 1px solid pink;
+    border-radius: 50%;
+    text-align: center;   
+    line-height: 80px;
+    position: fixed;
+    bottom: 20px;
+    right:30px;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 3rem;
+}
+.cd-top--is-visible { 
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes upDown{
+  /* 1 chu kì xảy ra trong 100s */
+  0%{}
+  25%{
+    transform: translateY(-50px) scale(1.2);
+  }
+  50%{
+    transform: translateY(0)  scale(1);
+  }
+  75%{
+    transform: translateY(50px) scale(2);
+  }
+  100%{
+    transform: translateY(0)  scale(1);
+  }
+}

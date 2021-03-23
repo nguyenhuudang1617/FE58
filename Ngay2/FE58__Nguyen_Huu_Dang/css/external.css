@@ -1,0 +1,16 @@
+ 
+  #test{
+    /* độ ưu tiên la 100*/
+    background-color: saddlebrown;
+}
+#test.test{
+/* độ ưu tiên la 100+10*/
+background-color: sandybrown;
+}
+h1{
+    background-color: slategray;
+}
+h1#test.test{/* độ ưu tiên la 1+100+10*/
+    background-color: red;
+    text-align: center;
+}  

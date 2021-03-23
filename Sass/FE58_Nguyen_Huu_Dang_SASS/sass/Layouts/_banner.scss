@@ -1,0 +1,45 @@
+.banner__top{
+    background: linear-gradient(
+        -45deg
+        ,#EC5252 0%,#6E1A52 100%);
+    height: 8px;
+}
+
+.banner{
+    height: 360px;
+    color: #f7f8fa;
+    background-color: #29303b; 
+    align-items: center;
+    .banner__content{
+        .row-xs{
+            display: flex;
+            margin: 50px 0;
+            .item-col{
+                align-items: center;
+                flex-grow: 1;
+                max-width: 100%;
+            }
+        }
+        .row-between{
+            display: flex;
+            align-items: center;
+            .title{
+                font-size: $fs-3;
+                font-weight: 600;
+            }
+            .subtitle{
+                font-size: $fs-0;
+            }
+        }
+        i{
+            font-size: 30px;
+        }
+    }
+}
+// respoinsive 
+@include respoinsive('extra-large'){
+    .banner__content i{
+        display: none;
+    }
+}
+

@@ -1,0 +1,27 @@
+.services{
+    background-color: #d4d4d4;
+    .services__content{
+        color: black;
+        .item{
+            
+            border: 1px solid black;
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            i{
+                
+                display: block;
+                float: left;
+                font-size: 50px;
+                margin-right: 20px;
+            }
+            .services__text{
+                align-self: center;
+                text-align: left;
+                
+            }
+        }
+       
+       
+    }
+}

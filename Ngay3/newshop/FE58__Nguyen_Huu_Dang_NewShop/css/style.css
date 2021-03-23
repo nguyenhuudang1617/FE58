@@ -1,0 +1,303 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /* <!-- HEADER  --> */
+
+   
+    /* header account */
+    .header__account{
+        display: flex;
+        background-color: #3774c4;
+        justify-content:space-between;  
+        align-items:center;     
+        padding: 10px 70px; 
+    }
+    .header__account p{
+        display: inline;
+    
+        color: white;
+    }
+    .header__account ul{
+        list-style: none;
+       
+    }
+    .header__account li{
+        display: inline;
+        padding: 0 10px;
+        
+    }
+    .header__account ul li a{
+        text-decoration: none;
+        color: white;  
+    }
+    /* header content */
+    .header__content{
+        display: flex;
+        background-color: #245ba3;
+        justify-content:space-between;      
+        align-items:center;
+        margin: 0 auto;
+        padding: 10px 70px; 
+    }
+    .header__content ul{
+        list-style: none;
+    }
+    .header__content ul li{
+        display: inline;
+        padding: 0 10px;
+    }
+    .header__content ul li a{
+        text-decoration: none;
+        color: white;
+        
+    }
+    .header__nav p{
+        display: inline;
+        color: white;
+        
+        font-size: 35px;
+        padding-right: 50px;
+    }
+    .header__nav{
+        display: flex;
+        justify-content:space-evenly;      
+        align-items:center;
+    }
+    .header__cart{
+        padding: 0 20px;
+        text-align: right;
+    }
+    .header__cart p{      
+        display: block;
+    }
+    .header__cart a{
+        text-decoration: none;
+        color: white;
+    }
+    /* CAROUSEL */
+    .carousel{
+        background-image: url("./../img/b1.jpg");
+        height: 400px;
+        width: 100%;
+    }
+    /* INTRO */
+  
+    .intro__content{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);          
+        width: 80%;
+        margin: auto;
+        padding: 30px 0;
+    }
+    .intro__item img{
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    }
+    .intro__p1{
+        grid-column: 1 / span 2;   
+       grid-row: 1 / span 2;
+    }
+    .intro__p2{
+        grid-column: 3 / span 2;
+    }
+
+    /* PRODUCT */
+    .product h2{
+        text-align: center;
+        font-size: 40px;
+        color: #245ba3;
+        padding: 20px 10px;
+    }
+    .product__content{
+        width: 70%;
+        text-align: center;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around;     
+    }
+    .product__item{
+        border: 1px solid black ;  
+        width: 25%;
+        margin: 30px 10px;
+        padding: 20px 0;
+    }
+    .product__item img{
+        width: 100%;
+    }
+    .product__item p{
+        font-weight: bold;
+        display: inline;
+    }
+    .product__item span{
+        text-decoration: line-through;
+        
+    }
+    .product__item button{
+        border: 2px solid  #cf9b2b;
+        padding: 10px 20px ;
+        color:  #245ba3;
+    }
+    
+    /* BANNER */
+    .banner{
+        background-image: url("./../img/ban1.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+        text-align: center;
+    }
+    .banner__conntent{
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: white;
+        color: white;
+    }
+    .banner__conntent p {
+       font-size: 40px;
+        margin-top: -70px ;
+    }
+    
+    .banner__conntent span{    
+        font-size: 40px;        
+        display: block;      
+    }
+    .banner__conntent button{
+        background-color:  #cf9b2b;
+        color: white;
+        border: none;
+        padding: 10px 15px ;
+        margin: 5px;
+    }
+    /* ARRIVALS */
+    .arrivals{
+        text-align: center;
+    }
+    .arrivals h2{
+        font-size: 40px;
+        color: #245ba3;
+        padding: 20px 10px;
+    }
+    .arrivals__conntent{
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-around;     
+    }
+    .arrivals__item{
+        border: 1px solid black ;  
+        width: 25%;
+        margin: 30px 10px;
+        padding: 20px 0;
+    }
+    .arrivals__item img{
+        width: 100%;
+    }
+    .arrivals__item p{
+        font-weight: bold;
+        display: inline;
+    }
+    .arrivals__item span{
+        text-decoration: line-through;
+        
+    }
+    .arrivals__item button{
+        border: 2px solid  #cf9b2b;
+        padding: 10px 20px ;
+        color:  #245ba3;
+    }
+    /* FASHION */
+    
+    .fashion__conntent{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 80%;
+        margin: auto;
+        gap:15px;
+        padding: 30px 0;
+    }
+    .fashion h2{
+        text-align: center;
+        font-size: 40px;
+        color:  #245ba3;
+    }
+    .fashion__item img{
+        
+        width: 100%;
+        height: 100%;
+    }
+    .fashion__item{
+        position: relative;
+    }
+    .fashion__item p{
+        position: absolute;
+        color: white;
+        top:10px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+        padding:5px 3px;
+        background-color: #245ba3;
+        border-radius: 100%;
+        font-size: 14px;
+    }
+    .fashion__item span{
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        background-color: #245ba367;
+        color: white;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        font-size: 16px;
+        padding: 20px 0;
+    }
+    /* FOOTER */
+    
+    .footer__content{
+        display: flex;
+        width: 100%;
+        background-color: #245ba3;
+    }
+    
+    .footer__item{
+        color: white;
+        width: 100%;
+        height: 220px;
+        margin: 0 30px;
+        padding: 20px 50px;
+    }
+    .footer__item h3{
+        font-size: 20px;
+        padding: 20px 0;
+    }
+    .footer__item p{
+        
+        font-size: 15px;      
+    }
+    .footer__item ul{
+        list-style: none;      
+    }
+    .footer__item ul li{
+        padding: 5px 0;
+    }
+    .footer__item ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    .footer__newshop{
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        color: white;
+        height: 70px;
+        align-items: center;
+    }

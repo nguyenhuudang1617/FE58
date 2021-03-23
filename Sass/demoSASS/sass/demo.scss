@@ -1,0 +1,60 @@
+// khai báo biến
+$bg-color:red;
+
+h1{
+    background-color: $bg-color;
+}
+
+// Nesting selecter
+//nên lồng tối đa cấp con thứ 5
+
+.sec1 {
+    h2{
+        background-color: chocolate;
+    }
+    button{
+        background-color: coral;
+        &:hover{
+            background-color: crimson;
+        }
+    }
+}
+//extend
+.sec2{
+    @extend .sec1;
+    p{
+        color: cyan;
+    }
+}
+
+//mixin (không có tham số, có tham số)
+
+//function(có đủ các hàm: tham số, trả kết quả)
+
+//khai báo mixin
+@mixin styleSection {
+    h2{
+        background-color: darkblue;
+        color: darkgoldenrod;
+    }
+}
+
+.sec3{
+    @include styleSection();
+}
+
+//có tham số
+@mixin styleSection2($bg-color,$color) {
+    h2{
+        background-color: $bg-color;
+        color:$color ;
+    }
+    
+}
+.sec4{
+    @include styleSection2(red,white);
+}
+.sec5{
+    @include styleSection2(yellow,white);
+}
+

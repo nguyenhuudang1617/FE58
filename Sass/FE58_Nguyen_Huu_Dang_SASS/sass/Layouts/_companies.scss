@@ -1,0 +1,9 @@
+.companies-student__item:first-of-type{
+    border-bottom: none;
+    border-right: 1px solid #dedfe0;
+    padding: 28px 30px;
+}
+.companies__student h3{
+ font-size: $fs-2;
+ font-weight: $fw-bold;
+}
